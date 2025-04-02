@@ -89,12 +89,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let db = any::connect("wss://tenantship-.aws-euw1.surreal.cloud").await?;
 
     // Select a namespace and database
-    db.use_ns("testing").use_db("testing").await?;
+    db.use_ns("").use_db("").await?;
 
     // Authenticate
     db.signin(Root {
-        username: "adam",
-        password: "adam",
+        username: "",
+        password: "",
     }).await?;
 
 	db.query("CREATE person:john SET name = 'John Doe', age = 25").await?.check()?;
