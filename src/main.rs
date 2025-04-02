@@ -86,7 +86,7 @@ struct Person {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Open a connection
-    let db = any::connect("wss://tenantship-06av8l9ns9uit447gc396kpcpg.aws-euw1.surreal.cloud").await?;
+    let db = any::connect("wss://tenantship-.aws-euw1.surreal.cloud").await?;
 
     // Select a namespace and database
     db.use_ns("testing").use_db("testing").await?;
